@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wizapp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wizapp
+  template:
+    metadata:
+      labels:
+        app: wizapp
+    spec:
+      serviceAccountName: wizapp-admin  
+      containers:
+      - name: wizapp
+        image: dominicschmidl/tasky:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: MONGODB_URI
+          value: "mongodb://admin:pppp@10.0.1.229:27017/admin?authSource=admin"
+        - name: SECRET_KEY
+
