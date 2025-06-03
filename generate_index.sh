@@ -65,7 +65,7 @@ done
 # Close HTML
 cat <<EOL >> $OUTPUT_FILE
     </table>
-    <footer>&copy; $(date +%Y) Dominic Schmidl. All rights reserved.</footer>
+    <footer>&copy; $(date +%Y) created by Dominic Schmidl</footer>
   </div>
 </body>
 </html>
