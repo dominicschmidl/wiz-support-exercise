@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: wizapp-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: wizapp
@@ -15,7 +15,7 @@ spec:
       serviceAccountName: wizapp-admin  
       containers:
       - name: wizapp
-        image: dominicschmidl/tasky:latest
+        image: dominicschmidl/tasky_with_logo
         ports:
         - containerPort: 8080
         env:
