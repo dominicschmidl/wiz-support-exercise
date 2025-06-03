@@ -20,5 +20,6 @@ nodeGroups:
     privateNetworking: true
     ssh:
       allow: true
-      publicKeyName: my-key-pair  # Make sure you create an SSH key pair before using this
+      publicKeyName: worker_keypair.pem   # Make sure you create an SSH key pair before using this
+
 
